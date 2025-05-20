@@ -159,7 +159,7 @@ def main():
 
     try:
         response = requests.post(
-            f"http://localhost:8000/v1/main",
+            f"https://api.automcp.app/v1/main",
             json={"urls": urls},
             headers=headers
         )
