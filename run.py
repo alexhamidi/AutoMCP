@@ -180,7 +180,7 @@ def main():
         # Generate MCP server files via API
         try:
             mcp_response = requests.post(
-                f"http://localhost:8000/v1/gen",
+                f"https://api.automcp.app/v1/gen",
                 json={
                     "pages_data": pages_data,
                     "name": name,
