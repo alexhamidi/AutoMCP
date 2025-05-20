@@ -11,7 +11,14 @@ AutoMCP is a powerful tool that enables AI clients to seamlessly connect with an
 
 ## 🚀 Quick Start
 
-1. Clone this repository
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/alexhamidi/AutoMCP.git
+    ```
+2. Enter the directory:
+    ```
+    cd AutoMCP
+    ```
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
