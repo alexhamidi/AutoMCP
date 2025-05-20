@@ -226,7 +226,7 @@ def main():
         else:  # Windsurf
             print("\n" + WINDSURF_CONFIG.format(name=name, port=port))
 
-        if choice == 'Local Python':
+        if choice == 'Local Python server':
             print(f"\nTo run the server locally:")
             print(f"1. cd {name}")
             print("2. pip3 install -r requirements.txt")
