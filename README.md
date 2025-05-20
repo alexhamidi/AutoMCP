@@ -1,6 +1,6 @@
 # AutoMCP
 
-AutoMCP is a powerful tool that enables AI clients to seamlessly connect with and understand your documentation. It processes your documentation URLs and creates a dedicated server that enhances AI interactions with your content.
+AutoMCP is a powerful tool that enables AI clients to seamlessly connect with and understand your documentation. It processes your documentation URLs and creates a dedicated MCP Server
 
 ## 🚨 Important: Access Requirements
 
@@ -47,7 +47,6 @@ AutoMCP offers two deployment methods:
 AutoMCP supports multiple AI clients. Here's how to connect each one:
 
 ### Cursor
-
 1. Create/edit `.cursor/mcp.json`:
 ```json
 {
@@ -60,8 +59,9 @@ AutoMCP supports multiple AI clients. Here's how to connect each one:
 ```
 
 ### Claude Desktop
-
-1. Create/edit `claude_desktop_config.json`:
+1. Open Claude Desktop settings (`cmd+,`)
+2. Click `Developer` then `Edit Config`
+3. Paste the following into `claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
@@ -78,11 +78,12 @@ AutoMCP supports multiple AI clients. Here's how to connect each one:
 
 ### Windsurf
 
-1. Create/edit `.codeium/windsurf/mcp_config.json`:
+1. Edit `.codeium/windsurf/mcp_config.json`:
 ```json
 {
   "mcpServers": {
     "your_server_name": {
+      "id": "automcp-{name}",
       "command": "npx",
       "args": [
         "mcp-remote",
