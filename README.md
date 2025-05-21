@@ -104,6 +104,7 @@ AutoMCP supports multiple AI clients. Here's how to connect each one:
 
 ## ⚠️ Disclaimers
 
+- For AutoMCP to work properly, URLs must be to pages with clear, complete, HTTP Rest API documentation
 - AutoMCP is currently in CLI beta
 - Features and API may change without notice
 - Report any issues to alexanderhamidi1@gmail.com

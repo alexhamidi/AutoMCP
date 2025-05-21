@@ -128,7 +128,7 @@ def main():
     os.makedirs("servers", exist_ok=True)
 
     urls = []
-    print("\nPaste your documentation URLs below (submit with an empty line):")
+    print("\nPaste your Rest API documentation URLs below (submit with an empty line):")
     try:
         url_input = ""
         while True:
