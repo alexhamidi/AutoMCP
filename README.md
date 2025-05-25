@@ -2,6 +2,8 @@
 
 AutoMCP is a powerful tool that enables AI clients to seamlessly connect with and understand your documentation. It processes your documentation URLs and creates a dedicated MCP Server
 
+You can view the backend code here: https://github.com/alexhamidi/automcp-backend
+
 ## 🚨 Important: Access Requirements
 
 **API Key Required**: AutoMCP is currently in a private beta and requires an API key to use. To get access:
