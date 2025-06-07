@@ -1,6 +1,23 @@
+# Source
+src/
+
+# Development files
 test.ts
 .env
 servers/
 scrapingResult.json
 tools.json
+
+# Dependencies
 node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build
+tsconfig.tsbuildinfo

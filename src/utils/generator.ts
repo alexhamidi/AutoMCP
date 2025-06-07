@@ -3,7 +3,9 @@ import * as path from 'path';
 import { Tool, Parameter, Header } from '../lib/interfaces';
 
 export async function generateMcp(tools: Tool[], name: string): Promise<void> {
-  const templateDir = path.join(process.cwd(), 'template');
+  // Get the package root directory (2 levels up from current file)
+  const packageRoot = path.join(__dirname, '..', '..');
+  const templateDir = path.join(packageRoot, 'template');
   const targetDir = path.join(process.cwd(), 'servers', name);
 
   // Ensure template directory exists

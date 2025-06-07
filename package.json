@@ -1,16 +1,21 @@
 {
-  "name": "automcp-unified",
+  "name": "@automcp.app/cli",
   "version": "1.0.1",
-  "description": "Unified AutoMCP implementation",
-  "main": "dist/index.js",
+  "description": "AutoMCP - Automated API Client Generation CLI",
+  "main": "dist/main.js",
   "bin": {
-    "automcp": "./dist/index.js"
+    "automcp": "./dist/main.js"
   },
+  "files": [
+    "dist",
+    "template"
+  ],
   "scripts": {
     "build": "tsc",
     "start": "node dist/main.js",
     "dev": "ts-node src/main.ts",
-    "test": "ts-node src/test.ts"
+    "test": "ts-node src/test.ts",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.18.0",

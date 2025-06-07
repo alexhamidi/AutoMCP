@@ -119,8 +119,6 @@ program
         if (!scrapingResult.success) {
           throw new Error('Failed to scrape documentation: ' + JSON.stringify(scrapingResult.failed_urls));
         }
-        fs.writeFileSync('scrapingResult.json', JSON.stringify(scrapingResult, null, 2));
-
       } else {
         const { content } = await inquirer.prompt([{
           type: 'editor',
@@ -139,8 +137,6 @@ program
       // Parse documentation
       console.log('\nParsing API documentation...');
       const tools = await parseDocumentation(scrapingResult.data, provider);
-      fs.writeFileSync('tools.json', JSON.stringify(tools, null, 2));
-
       if (!tools.length) {
         throw new Error('No API endpoints found in the documentation');
       }
