@@ -1,2 +1,6 @@
 test.ts
 .env
+servers/
+scrapingResult.json
+tools.json
+node_modules/

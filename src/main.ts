@@ -60,6 +60,29 @@ program
   .version('1.0.0')
   .action(async () => {
     try {
+
+
+      // Get AI provider
+      const { provider } = await inquirer.prompt([{
+        type: 'list',
+        name: 'provider',
+        message: 'Select the AI provider to use to parse the documentation:',
+        choices: ['gemini', 'openai', 'anthropic'],
+        default: 'gemini'
+      }]);
+
+      // Validate API key early
+      try {
+        const apiKey = process.env[`${provider.toUpperCase()}_API_KEY`];
+        if (!apiKey) {
+          throw new Error(`API key not found for provider ${provider}. Please set ${provider.toUpperCase()}_API_KEY in your environment.`);
+        }
+      } catch (error) {
+        console.error('\nError:', error instanceof Error ? error.message : error);
+        process.exit(1);
+      }
+
+
       // Get server name
       const { name } = await inquirer.prompt([{
         type: 'input',
@@ -72,14 +95,6 @@ program
         }
       }]);
 
-      // Get AI provider
-      const { provider } = await inquirer.prompt([{
-        type: 'list',
-        name: 'provider',
-        message: 'Select the AI provider to use:',
-        choices: ['gemini', 'gpt-4', 'claude'],
-        default: 'gemini'
-      }]);
 
       // Get documentation source
       const { source } = await inquirer.prompt([{
