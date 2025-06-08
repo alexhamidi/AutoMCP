@@ -71,6 +71,28 @@ npm run build
 npm start -- --sse
 ```
 
+### Client Configuration
+
+The generated server can be accessed in clients like Cursor using one of two configurations in your `.cursor/mcp.json` file:
+
+1. For locally running servers:
+```json
+"mcp": {
+  "url": "http://localhost:3001/sse"
+}
+```
+
+2. For NPM published servers:
+```json
+"mcp": {
+  "command": "npx",
+  "args": [
+    "-y",
+    "@path-to/your-package-name@latest"
+  ]
+}
+```
+
 ### Publishing to NPM
 
 When publishing to NPM, you can choose between:

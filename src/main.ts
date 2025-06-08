@@ -182,6 +182,11 @@ program
       } else {
         console.log('\nTo run the server:');
         console.log(`cd servers/${name} && npm i && npm run build && npm start -- --sse`);
+        console.log('\nTo connect to the server, add the following to your mcp.json:');
+        console.log(`"${name}": {
+  "url": "http://localhost:3001/sse"
+}`);
+
       }
 
     } catch (error) {
