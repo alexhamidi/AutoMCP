@@ -1,4 +1,4 @@
-# AutoMCP - Automated API Client Generation
+# AutoMCP - Automated MCP Server Generation
 
 AutoMCP is a powerful CLI tool that automatically generates MCP servers from documentation. It supports scraping API documentation from URLs or direct input and generates fully functional, published servers.
 
